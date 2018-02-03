@@ -90,16 +90,22 @@ if (!is_null($events['events'])) {
 			
 			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
 			//$headers = array('Authorization: Bearer ' . $ac_token);
+						
+            $messages = [
+            'type' => 'text',
+            'text' => "Respond :"
+             ];
 			
+
 			
             
-            //$post = json_encode($data);
+            $post = json_encode($data);
             //$headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $ac_token);
 
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $content);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
             //curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
             curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
             $result = curl_exec($ch);
