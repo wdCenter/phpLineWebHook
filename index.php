@@ -91,7 +91,7 @@ if (!is_null($events['events'])) {
 			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
 			//$headers = array('Authorization: Bearer ' . $ac_token);
 						
-            $messages = [
+            $data = [
             'type' => 'text',
             'text' => "Respond :"
              ];
