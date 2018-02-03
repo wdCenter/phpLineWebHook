@@ -114,7 +114,7 @@ if (!is_null($events['events'])) {
 			if($response){
 				$messages = [
 					'type' => 'text',
-					'text' => "\nTRUExxx"+$postString
+					'text' => "\nTRUExxx"
 				];
 			}else{
 				$messages = [
