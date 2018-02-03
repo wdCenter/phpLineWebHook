@@ -94,10 +94,10 @@ if (!is_null($events['events'])) {
 			
 			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
 			//$headers = array('Authorization: Bearer ' . $ac_token);
-			
+			$post = json_encode($data);
 			$ch = curl_init($url);
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			
+			curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
