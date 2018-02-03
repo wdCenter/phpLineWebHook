@@ -92,21 +92,19 @@ if (!is_null($events['events'])) {
 				'userName' => 'bbb'
 			);
 			
-			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
-			$ch = curl_init($url);
+			$url = 'http://13.250.89.6/rest/LINEUSER/aaa';
+			//$headers = array('Authorization: Bearer ' . $ac_token);
 			
-			$postString = http_build_query($data, '', '&');
-		
-		//	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_POST, 1);
-			curl_setopt($ch, CURLOPT_POSTFIELDS, $postString);
-		//	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			// Get the response
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 			$response = curl_exec($ch);
 			curl_close($ch);
-
 			
-				
+			
 			// Request for profile and send a push message
 			//requestForProfile($access_token,$userID);
 
@@ -116,7 +114,7 @@ if (!is_null($events['events'])) {
 			if($response){
 				$messages = [
 					'type' => 'text',
-					'text' => "\nTRUExxx"
+					'text' => "\nTRUExxx"+$postString
 				];
 			}else{
 				$messages = [
