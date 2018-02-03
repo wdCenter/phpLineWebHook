@@ -92,11 +92,11 @@ if (!is_null($events['events'])) {
 				'userName' => 'bbb'
 			);
 			
-			$url = 'http://13.250.89.6/rest/LINEUSER/aaa';
+			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
 			//$headers = array('Authorization: Bearer ' . $ac_token);
 			
 			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
 			
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
