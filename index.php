@@ -92,7 +92,7 @@ if (!is_null($events['events'])) {
 				'userName' => 'bbb'
 			);
 			
-			$url = 'http://13.250.89.6/rest/LINEUSER/aaa';
+			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
 			$ch = curl_init($url);
 			
 			$postString = http_build_query($data, '', '&');
