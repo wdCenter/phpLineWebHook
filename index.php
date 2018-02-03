@@ -86,23 +86,22 @@ if (!is_null($events['events'])) {
 			// Build connection to EB and send data to EB
 			// Now I only send a userID to test the connection, if the connection
 			// succeeds, I will send userName later.
-			
-			$data = array(
-				'userID' => $userID,
-				'userName' => 'bbb'
-			);
-			
 			$url = 'http://13.250.89.6/rest/LINEUSER/bbb';
-			//$headers = array('Authorization: Bearer ' . $ac_token);
-			
-			$ch = curl_init($url);
-			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-			
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-			//curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-			$response = curl_exec($ch);
-			curl_close($ch);
+			$data = [
+                'to' => $userID,
+                'messages' => 'zzz'
+            ];
+            $post = json_encode($data);
+            $headers = array('Content-Type: application/json');
+
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            $result = curl_exec($ch);
+            curl_close($ch);
 			
 			
 			// Request for profile and send a push message
