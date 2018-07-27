@@ -118,7 +118,7 @@ if (!is_null($events['events'])) {
 			}else{
 				$messages = [
 					'type' => 'text',
-					'text' => "\n ".$events."\r\n";
+					'text' => "\n ".$events."\r\n"
 				];
 			}
 			
