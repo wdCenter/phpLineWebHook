@@ -64,7 +64,7 @@ $events = json_decode($content, true);
 
 echo "Just a test";
 echo $events . "\r\n";
-$userID = 'U192a14069ce58625a868873469d5a7a9';
+$userID = 'a';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 		
@@ -92,7 +92,7 @@ if (!is_null($events['events'])) {
                 'messages' => 'zzz'
             ];
             $post = json_encode($data);
-            $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+            $headers = array('Content-Type: application/json');
 
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -118,7 +118,7 @@ if (!is_null($events['events'])) {
 			}else{
 				$messages = [
 					'type' => 'text',
-					'text' => "\nFALSE".$response
+					'text' => "\nFALSE"
 				];
 			}
 			
