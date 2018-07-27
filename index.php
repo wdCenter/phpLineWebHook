@@ -113,7 +113,7 @@ if (!is_null($events['events'])) {
 			if($response){
 				$messages = [
 					'type' => 'text',
-					'text' => "Respond :" . json_encode($event);
+					'text' => "Respond :" . json_encode($event)
 				];
 			}else{
 				$messages = [
