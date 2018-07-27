@@ -86,7 +86,7 @@ if (!is_null($events['events'])) {
 			// Build connection to EB and send data to EB
 			// Now I only send a userID to test the connection, if the connection
 			// succeeds, I will send userName later.
-			$url = 'http://lineprofile-env.ap-southeast-1.elasticbeanstalk.com/';
+			$url = 'http://13.250.89.6/rest/LINE/services/';
 			$data = [
                 'to' => $userID,
                 'messages' => 'zzz'
