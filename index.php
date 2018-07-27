@@ -64,7 +64,7 @@ $events = json_decode($content, true);
 
 echo "Just a test";
 echo $events . "\r\n";
-$userID = 'a';
+$userID = 'U192a14069ce58625a868873469d5a7a9';
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 		
