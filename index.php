@@ -113,12 +113,12 @@ if (!is_null($events['events'])) {
 			if($response){
 				$messages = [
 					'type' => 'text',
-					'text' => "\nTRUE"
+					'text' => "\nTRUE".$response
 				];
 			}else{
 				$messages = [
 					'type' => 'text',
-					'text' => "\n ".$events."\r\n"
+					'text' => "\nFALSE"
 				];
 			}
 			
