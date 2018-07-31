@@ -123,7 +123,7 @@ if (!is_null($events['events'])) {
 			}
 			
 			// Send the return value of curl connection to the user by messaging	
-			replyToUser($userID,$messages,$access_token);
+			//replyToUser($userID,$messages,$access_token);
 			
 			
 	
