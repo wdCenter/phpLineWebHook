@@ -91,7 +91,7 @@ if (!is_null($events['events'])) {
                 'to' => $userID,
                 'messages' => 'zzz'
             ];
-	    $data = iconv("tis-620","utf-8",$data);		
+		
             $post = json_encode($data);
             $headers = array('Content-Type: application/json');
 
